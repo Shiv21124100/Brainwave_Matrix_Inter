@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(4, 29, 29);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.banner {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    animation: move-banner 10s ease-in-out forwards;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+@keyframes move-banner {
+    0% {
+        transform: translateX(-100%);
+        color: rgb(255, 255, 255);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(0);
+        color: rgb(0, 179, 179);
+    }
+
+    100% {
+        transform: translateX(0);
+        color: rgb(0, 179, 179);
+    }
+}
+
+.banner:hover h2 {
+    transform: rotate(360deg);
+    color: rgb(255, 0, 0);
+}
+
+.container {
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.inputs input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid rgb(6, 145, 145);
+    outline: none;
+    font-size: 19px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.inputs button {
+    height: 45px;
+    background-color: rgb(4, 29, 29);
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 20px;
+    margin-left: 10px;
+}
